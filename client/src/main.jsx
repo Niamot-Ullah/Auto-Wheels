@@ -29,19 +29,19 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => axios(`${import.meta.env.VITE_API_URL}/featured-cars`),
+        loader: () => axios(`https://server-side-auto-wheels.vercel.app/featured-cars`),
         hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/cars',
         element: <Cars></Cars>,
-        loader: () => axios(`${import.meta.env.VITE_API_URL}/cars`),
+        loader: () => axios(`https://server-side-auto-wheels.vercel.app/cars`),
         hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/car/:id',
         element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>,
-        loader: ({ params }) => axios(`${import.meta.env.VITE_API_URL}/car/${params.id}`),
+        loader: ({ params }) => axios(`https://server-side-auto-wheels.vercel.app/car/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>
       },
       {
@@ -51,13 +51,13 @@ const router = createBrowserRouter([
       {
         path: '/my-cars/:email',
         element: <PrivateRoute><MyCars></MyCars></PrivateRoute>,
-        loader: ({ params }) => axios(`${import.meta.env.VITE_API_URL}/my-cars/${params.email}`),
+        loader: ({ params }) => axios(`https://server-side-auto-wheels.vercel.app/my-cars/${params.email}`),
         hydrateFallbackElement: <Loading></Loading>
       },
        {
         path:'/update-car/:id',
         element:<UpdateCar></UpdateCar>,
-        loader:({params})=>axios(`${import.meta.env.VITE_API_URL}/car/${params.id}`)
+        loader:({params})=>axios(`https://server-side-auto-wheels.vercel.app/car/${params.id}`)
       },
       {
         path: '/my-bookings',

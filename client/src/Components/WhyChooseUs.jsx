@@ -26,18 +26,17 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="py-12 bg-white text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-10">Why Choose Us?</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-7xl mx-auto">
+        <section className="py-12 my-10 bg-white text-center w-11/12 md:w-10/12 mx-auto ">
+            <h2 className="text-4xl font-bold text-gray-800 mb-10">Why Choose Us?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  max-w-7xl mx-auto">
                 {features.map((feature, index) => (
                     <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 1 }}
+                       
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.8 }}
                         onHoverStart={() => console.log('hover started!')}
                         key={index}
-                        className="bg-gradient-to-b from-blue-400 to-blue-300 text-black p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+                        className="bg-gradient-to-b from-blue-400 to-blue-300 text-black p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 "
                     >
                         <div className="w-12 h-12 rounded-full bg-white mx-auto flex items-center justify-center mb-4">
                             {feature.icon}

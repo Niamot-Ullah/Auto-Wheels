@@ -39,7 +39,7 @@ const Cars = () => {
     };
 
     return (
-        <div className='w-12/12 md:10/12 lg:w-10/12 mx-auto mt-6'>
+        <div className='w-11/12 md:10/12 lg:w-10/12 mx-auto mt-6'>
             <div className='flex flex-col md:flex-row justify-between'>
                 <form  >
                     <label className="input">
@@ -82,7 +82,7 @@ const Cars = () => {
             </div>
             <div className={`grid gap-4 my-2 justify-between items-center ${isListView
                 ? 'grid-cols-1' // List view
-                : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' // Card view
+                : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' // Card view
                 }`}>
                 {
                     cars.map(car =>

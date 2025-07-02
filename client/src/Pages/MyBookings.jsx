@@ -19,7 +19,7 @@ const MyBookings = () => {
     // console.log(orders);
 
     useEffect(() => {
-        axiosSecure(`/my-orders/${user?.email}`)
+        axiosSecure(`https://server-side-auto-wheels.vercel.app/my-orders/${user?.email}`)
             .then((data) => {
                 // console.log(data?.data);
                 setOrders(data?.data);

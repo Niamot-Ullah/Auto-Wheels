@@ -38,8 +38,8 @@ const Navbar = () => {
     // console.log(user?.email);
 
     return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm">
+        <div className=' bg-base-100 shadow-sm sticky top-0 z-50 '>
+            <div className="navbar w-11/12 md:w-10/12 mx-auto px-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className=" lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
                             {link}
                         </ul>
                     </div>
-                    <div className='flex pl-4'>
+                    <div className='flex pl-'>
                         <img alt='' src={logo} className='w-10 rounded-xl mr-1 md:mr-3'></img>
                         <NavLink to="/" className=" font-bold text-lg md:text-xl  self-center">Auto Wheels</NavLink>
 

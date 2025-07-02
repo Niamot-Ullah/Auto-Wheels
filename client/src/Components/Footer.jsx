@@ -29,8 +29,7 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <h6 className="footer-title">Useful Links</h6>
-                    <Link>Terms & Conditions</Link>
-                    <Link>Privacy Policy</Link>
+                    
                     <div className="flex gap-3 pt-2">
                         <Link>
                             <FaFacebook size={25} />

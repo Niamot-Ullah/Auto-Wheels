@@ -21,24 +21,19 @@ const offers = [
 
 const SpecialOffers = () => {
   return (
-    <section className="py-12 bg-white text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-10">SPECIAL OFFERS</h2>
+    <section className="py-12 bg-white text-center w-11/12 md:w-10/12 mx-auto ">
+      <h2 className="text-4xl font-bold text-gray-800 mb-10">SPECIAL OFFERS</h2>
       <div
- className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-7xl mx-auto">
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  max-w-7xl mx-auto">
         {offers.map((offer, index) => (
           <motion.div
-      initial={{scale:0}}
-      animate={{
-        
-    scale: 1,
-    transition: { duration: 1.5 }
-  }}
-  transition={{ duration: 1 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 1.1 }}
-                        onHoverStart={() => console.log('hover started!')}
+           
+            transition={{ duration: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 1.1 }}
+            onHoverStart={() => console.log('hover started!')}
             key={index}
-            className="bg-gradient-to-r from-gray-400 to-gray-600 text-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+            className="bg-gradient-to-r from-gray-400 to-gray-600 text-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
           >
             <h3 className="font-semibold text-lg mb-2">{offer.title}</h3>
             <p className="text-sm">{offer.description}</p>
